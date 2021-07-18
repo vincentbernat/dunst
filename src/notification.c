@@ -141,7 +141,7 @@ void notification_run_script(struct notification *n)
                                 gchar *n_progress_str = g_strdup_printf("%i", n->progress);
                                 gchar *n_timeout_str = g_strdup_printf("%li", n->timeout/1000);
                                 gchar *n_timestamp_str = g_strdup_printf("%li", n->timestamp / 1000);
-                                char* icon_path = get_path_from_icon_name(icon);
+                                char* icon_path = get_path_from_icon_name(icon, 1.0);
                                 safe_setenv("DUNST_APP_NAME",  appname);
                                 safe_setenv("DUNST_SUMMARY",   summary);
                                 safe_setenv("DUNST_BODY",      body);
